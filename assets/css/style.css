@@ -69,6 +69,8 @@
 /*----------------------
    2 ) Preloader Styles
   ----------------------*/
+  /*$*/
+
 
 #preloader {
     position: fixed;
@@ -220,7 +222,7 @@ h2 {
 h2.small-heading {
     padding: 60px 0 10px 0;
     font-size: 2.25em;
-    margin-bottom: 60px;
+    margin-bottom: 38px;
     position: relative;
     display: block;
     text-align: center;
@@ -567,7 +569,58 @@ body {
 
 
 /* ( a ) Story of Glory */
+/*$*/
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;  
+}
 
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+/*
+Will have to add at some point $
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+*/
+
+/*how to change side pictures $ */
 .profile-page .image-container {
     background: url(../img/about_us_featured.png);
     background-size: cover;
@@ -639,21 +692,24 @@ body {
 }
 
 .about-us-desc p:first-child {
-    font-size: 17px;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .about-us-desc p:last-child {
-    -webkit-column-count: 2;
+    -webkit-column-count: 1;
     /* Chrome, Safari, Opera */
-    -moz-column-count: 2;
+    -moz-column-count: 1;
     /* Firefox */
-    column-count: 2;
+    column-count: 1;
     -webkit-column-gap: 30px;
     /* Chrome, Safari, Opera */
     -moz-column-gap: 30px;
     /* Firefox */
     column-gap: 30px;
-    font-size: 14px;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -1206,6 +1262,7 @@ input#cfsubmit:hover {
 }
 
 .profile-page .footer {
+    margin-top: 100px;
     background-color: #01213B;
 }
 
@@ -1255,12 +1312,19 @@ input#cfsubmit:hover {
                 Media query
 ===============================================*/
 
-
+/*$*/
 @media (max-width: 1056px) and (min-width: 992px){
 
     .main-heading h1{
         font-size: 45px;
     }
+    /*
+    .intro-content img{
+        width:10%;
+        align:middle;
+
+    }*/
+
     
 }
 
